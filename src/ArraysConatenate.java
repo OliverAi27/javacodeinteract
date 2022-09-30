@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArraysConatenate {
@@ -9,64 +10,60 @@ public class ArraysConatenate {
 //add each words using a + 
 //display
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter 1st Array");
-		int[] a = {10,20,30,40};
-		int[] b = {50,60,70,80};
-		int a1=a.length;
-		int b1=b.length;
+		int[] array1 = { 1, 2, 3, 4 };
+		int[] array2 = { 4, 5, 2 };
+		int[] mergedarray = new int[array1.length + array2.length];
+		int pos = 0;
 		
-		for (int i = 0; i < a1; i = i++) { 
-			System.out.println(a[i]);
+		for (int i = 0; i < array1.length; i++) {
+			mergedarray[pos++] = array1[i];
+
 		}
-		for (int i = 0; i < b1; i = i++) {
-			System.out.println(b[i]);	
-		} 
-		int c1=a1+b1;
-		int[] result = new int[newArrayLength];
-		int idx = 0; 
-		
-		for (int i = 0; i < c1; i++)
-			System.out.println(c1[i]);
-	}
-}
-		
-		for (int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);
+		int count = array1.length;
+		for (int j = 0; j < array2.length; j++) {
+			mergedarray[count] = array2[j];
+			count++;
+
 		}
+		System.out.println(Arrays.toString(mergedarray));
+	
 		
-		for (int i = 0; i < b.length; i++) {
-			System.out.println(b[i]);
-		}
-		
-		int newArrayLength = a.length + b.length;
-		int[] result = new int[newArrayLength];
-		
-		int index = 0;
-		
-		for (int i = 0; i < a.length; i++) {
-			int member = a[i];
-			result[index] = member;
-			index++;
-		}
-		
-		System.out.println("Index value after appending array A::" + index);
-		
-		for (int i = 0; i < b.length; i++) {
-			int member = b[i];
-			//			result[a.length + i] = member;
-			result[index] = member;
-			//			index++;
-		}
-		
-		System.out.println("----------Printing Result-----------");
-		for (int i = 0; i < result.length; i++) {
-			System.out.println(result[i]);
-		}
+//		for (int i = 0; i < a.length; i++) {
+//			System.out.println(a[i]);
+//		}
+//		
+//		for (int i = 0; i < b.length; i++) {
+//			System.out.println(b[i]);
+//		}
+//		
+//		int newArrayLength = a.length + b.length;
+//		int[] result = new int[newArrayLength];
+//		
+//		int index = 0;
+//		
+//		for (int i = 0; i < a.length; i++) {
+//			int member = a[i];
+//			result[index] = member;
+//			index++;
+//		}
+//		
+//		System.out.println("Index value after appending array A::" + index);
+//		
+//		for (int i = 0; i < b.length; i++) {
+//			int member = b[i];
+//			//			result[a.length + i] = member;
+//			result[index] = member;
+//			//			index++;
+//		}
+//		
+//		System.out.println("----------Printing Result-----------");
+//		for (int i = 0; i < result.length; i++) {
+//			System.out.println(result[i]);
+//		}
 		
 	}
 	
-}		
+	}
 		
 		
 		

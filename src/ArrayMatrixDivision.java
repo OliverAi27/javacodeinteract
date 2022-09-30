@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayMatrixMultiplication {
+public class ArrayMatrixDivision {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -45,12 +45,12 @@ public class ArrayMatrixMultiplication {
 		for (int i = 0; i<rows1; i++) {
 			for (int j = 0; j<columns2; j++) {
 				for (int k = 0; k<columns1; k++) {
-					matrix3[i][j] = matrix1[i][k] * matrix2[k][j];
+					matrix3[i][j] = matrix1[i][k]/matrix2[k][j];
 				}
 			
 	}
 }
-		System.out.println(" Result of 2 Matrixes Multiplication");
+		System.out.println(" Result of 2 Matrixes Division");
 		for (int o []: matrix3) { 
 			System.out.println(Arrays.toString(o));
 			

@@ -2,23 +2,21 @@ import java.util.Scanner;
 
 public class StringWordsCount {
 
-	public static int countWordsUsingSplit(String input) {
-		System.out.println("Enter a statement.");
-		Scanner words = new Scanner(System.in);
-//		if (words == null || words.isEmpty()) { 
-//			System.out.println("Input is invalid or empty");//return 0; } 
-//		String[]words = line.split("\\s+"); 
-//		return words.length; }
-//		String[]words2=words.split("");
-//		System.out.println(words2);
-		for(int i=0; i<=words.length-1; i++) {System.out.println(words[i]);
+	public static void main(String [] args) {
+		
+		System.out.println("Enter string.");
+		Scanner sc = new Scanner(System.in);
+		String a = sc.nextLine();
+		
+		int wordscount = 0;
+		if(a.charAt(0) !=' ') {
+			wordscount++;
 		}
+		for(int i = 0; i<a.length(); i++) {
+			if(a.charAt(i)==' ' && a.charAt(i+1) !=' ') {
+				wordscount++;
+			}
+		}
+		System.out.println(wordscount);
 	}
 }
-	
-
-
-//		for(int i=0; i<words.length(); i++) {
-//		if(words.charAt(i)==' ') c++;
-//		sysout("num of words:" +c);
-//}

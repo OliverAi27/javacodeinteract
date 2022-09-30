@@ -20,19 +20,31 @@ public class ArrayMergeRemoveDuplicateNumbers {
 
 		}
 		System.out.println(Arrays.toString(mergedarray));
+	
+		for (int i = 0; i < mergedarray.length; i++) {
 
-		int o = 0;
-		for (int p = 0; p < mergedarray.length; p++) {
-			// System.out.println(p);
-			if (p + 1 < mergedarray.length) {
-				if (mergedarray[p] != mergedarray[p + 1]) {
-					filteredarray[o++] = mergedarray[p];
+			for (int j = i + 1; j < mergedarray.length; j++) {
+				if (mergedarray[j] < mergedarray[i]) { // j<i:ascending order
+					int temp = mergedarray[i];     // j>i:descending order
+					mergedarray[i] = mergedarray[j];
+					mergedarray[j] = temp;
 				}
 			}
 		}
-		filteredarray[o++] = mergedarray[mergedarray.length - 1];
+			for (int k = 0; k < mergedarray.length; k++) {
+				System.out.print(mergedarray[k]);
+		
+		int o = 0;
+		for (int p = 0; p < mergedarray.length-1; p++) {
+				if (mergedarray[p] != mergedarray[p + 1]) {
+					filteredarray[o++] = mergedarray[p];
+				}
+		}
+			
+		
+		filteredarray[o++] = filteredarray[mergedarray.length - 1];
 		for (int q = 0; q < o; q++) {
-			System.out.println(filteredarray[q]);
+			System.out.print(filteredarray[q] + " ");
 		}
 
 //		import java.util.Scanner;
@@ -81,6 +93,6 @@ public class ArrayMergeRemoveDuplicateNumbers {
 //		        }
 //		    }
 //		}
-
+			}	
 	}
 }

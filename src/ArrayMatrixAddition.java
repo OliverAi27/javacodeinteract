@@ -5,17 +5,17 @@ public class ArrayMatrixAddition {
 	public static void main(String[] args) {
 				
 		Scanner sc =  new Scanner(System.in);
-		System.out.println("Enter total number of rows");
+		System.out.println("Enter number of rows of the Matrices");
 		int rows = sc.nextInt();
 		
-		System.out.println("Enter total number of columns");
+		System.out.println("Enter number of columns of the Matrices");
 		int columns = sc.nextInt();
 		
 		int matrix1[][] = new int[rows][columns];
 		int matrix2[][] = new int[rows][columns];
 		int sum[][] = new int[rows][columns];
 		
-		System.out.println("Enter the matrix1 values");
+		System.out.println("Enter the 1st matrix values");
 				
 		for (int i = 0; i<rows; i++) {
 			for (int j = 0; j<columns; j++) {
@@ -23,7 +23,7 @@ public class ArrayMatrixAddition {
 			}
 		}
 		
-		System.out.println("Enter the matrix2 values");
+		System.out.println("Enter the 2nd matrix values");
 				
 		for (int a = 0; a<rows; a++) {
 			for (int b = 0; b<columns; b++) {
@@ -31,28 +31,29 @@ public class ArrayMatrixAddition {
 			}
 		}	
 		
-		System.out.println("matrix1");
+		System.out.println("1st Matrix");
 		
 		for (int r []: matrix1) { 
 		System.out.println(Arrays.toString(r));
 		}
 		
-		System.out.println("matrix2");	
+		System.out.println("2nd Matrix");	
 		
 		for (int r []: matrix2) {
 		System.out.println(Arrays.toString(r));
 		}
-		
-		System.out.println("Sum of the 2 matrices = "  );
 			
 		for (int d = 0; d<rows; d++) {
 			for (int e = 0; e<columns; e++) {
-				sum[d][e] = matrix1[d][e] / matrix2[d][e];	
-				System.out.print(sum[d][e] + " ");
+				sum[d][e] = matrix1[d][e] + matrix2[d][e];	
 			}
-			System.out.println();
-		}	
+		}
+			System.out.println("1st Matrix + 2nd Matrix");
+			for (int r []: sum) { 
+				System.out.println(Arrays.toString(r));
+		
 
 	}
 
+}
 }
