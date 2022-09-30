@@ -125,12 +125,13 @@ public class ArrayQuizMatrix {
         String Q6 = "Q6. What is the capital of China?";
         String Q7 = "Q7. What is the capital of Singapore?";
         String Q8 = "Q8. What is 2^0?";
-        String []Questions = {Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8};
-        for (int i = 0; i<Questions.length; i++)
+        String A1 = "1. Male", "2. Kathmandu","3. New Delhi", "4. Dhaka";
+        String [][]QA = {Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8}{{"1. Male", "2. Kathmandu","3. New Delhi","4. Dhaka"}};
+        for (int i = 0; i<Questions.length; i++) {
         System.out.println(Questions[i]);
-        String []Maldives = {"1. Male", "2. Kathmandu","3. New Delhi","4. Dhaka"};
-        for (int i = 0; i<Maldives.length; i++) 
-			System.out.println(Maldives[i]);
+        String []Answers = {"1. Male", "2. Kathmandu","3. New Delhi","4. Dhaka"};
+        for (int i = 0; i<Answers.length; i++) 
+			System.out.println(Answers[i]);
         System.out.println("Enter your choice:: ");
         int choice = sc.nextInt();
 
